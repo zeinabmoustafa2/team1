@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>API Documentation</title>
+  </head>
+  <body>
+    <div class="tables">
+      <h1>API Docs</h1>
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>HTTP Method</td>
+            <td>POST</td>
+          </tr>
+          <tr>
+            <td>API URL</td>
+            <td>https://AbdoCenter.com/api/v2</td>
+          </tr>
+          <tr>
+            <td>Response format</td>
+            <td>JSON</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Services List</h2>
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>Parameters</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>services</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Example</p>
+      <pre>
+        <code>
+          [ 
+            {
+              "service": 1,
+              "name": "Followers",
+              "type": "Default",
+              "category": "First Category",
+              "rate": "0.90",
+              "min": "50",
+              "max": "10000"
+            },
+            {
+              "service": 2,
+              "name": "Comments",
+              "type": "Custom Comments",
+              "category": "Second Category",
+              "rate": "8",
+              "min": "10",
+              "max": "1500"
+            }
+          ]
+        </code>
+      </pre>
+      <h2>Add Order</h2>
+      <select id="services">
+        <option value="1">Followers</option>
+        <option value="2">Comments</option>
+      </select>
+
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>Parameters</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>add</td>
+          </tr>
+          <tr>
+            <td>service</td>
+            <td>Service ID</td>
+          </tr>
+          <tr>
+            <td>link</td>
+            <td>Link to the post</td>
+          </tr>
+          <tr>
+            <td>quantity</td>
+            <td>Quantity</td>
+          </tr>
+          <tr>
+            <td>custom</td>
+            <td>Custom comments</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Example</p>
+      <pre>
+        <code>
+          {
+            "order": 1,
+            "link": "https://www.instagram.com/p/123456",
+            "quantity": 100,
+            "custom": "Nice post!"
+          }
+        </code>
+      </pre>
+      <h2>Order Status</h2>
+
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>Parameters</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>status</td>
+          </tr>
+          <tr>
+            <td>order</td>
+            <td>Order ID</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Example</p>
+      <pre>
+        <code>
+          {
+            "charge": "0.27819",
+            "start_count": "3572",
+            "status": "Partial",
+            "remains": "157",
+            "currency": "USD"
+         }
+        </code>
+     </pre>
+
+      <h2>Multiple Order List</h2>
+
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>Parameters</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>orders</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Example</p>
+      <pre>
+        <code>
+          [
+            {
+              "order": 1,
+              "service": "Followers",
+              "link": "https://www.instagram.com/p/123456",
+              "quantity": 100,
+              "status": "Completed",
+              "date": "2020-07-01 12:00:00"
+            },
+            {
+              "order": 2,
+              "service": "Comments",
+              "link": "https://www.instagram.com/p/123456",
+              "quantity": 10,
+              "status": "Pending",
+              "date": "2020-07-01 12:00:00"
+            }
+          ]
+        </code>
+      </pre>
+
+      <h2>User balance</h2>
+
+      <table>
+        <tbody id="table1">
+          <tr>
+            <td>Parameters</td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>balance</td>
+          </tr>
+        </tbody></table>
+      <p>Example</p>
+      <pre>
+        <code>
+          {
+            "balance": "0.27819",
+            "currency": "USD"
+          }
+        </code>
+    </div>
+  </body>
+</html>
