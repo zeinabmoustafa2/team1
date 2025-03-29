@@ -1,20 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elzero</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styel.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="section1">
+        <div class="container4">
+            <!-- القسم الخاص بالصورة -->
+            <div class="image-side">
+                <img src="img/istockphoto-1413735503-1024x1024.jpg" alt="Social Media">
+                <div class="icons-wrapper">
+                    <span class="icon">⭐</span>
+                    <span class="icon">💻</span>
+                    <span class="icon">⚙️</span>
+                    <span class="icon">📱</span>
+                    <span class="icon">🖥️</span>
+                    <span class="icon">🚀</span>
+                </div>
+            </div>
 
-  </body>
+        <!-- نموذج تسجيل الدخول بدون الأيقونة العلوية -->
+<div class="form-log">
+  <h3>AbdoCenter</h3>
+
+  <div class="input-box">
+    <!-- <span class="icon"><i class="fa-solid fa-user"></i></span> -->
+    <input type="text" placeholder="اسم المستخدم">
+  </div>
+
+  <div class="input-box">
+    <!-- <span class="icon"><i class="fa-solid fa-lock"></i></span> -->
+    <input type="password" placeholder="كلمة المرور">
+  </div>
+
+  <div class="options">
+    <label><input type="checkbox"> تذكرني</label>
+    <a href="#">هل نسيت كلمة السر؟</a>
+  </div>
+
+  <button class="login-btn">تسجيل الدخول</button>
+</div>
+
+        </div>
+    </div>
+<div class="section2">
+  <div class="container">
+  <div class="box-section2">
+    <h2></h2>
+    <p></p>
+  </div>
+
+  </div>
+</div>
+    <script>
+        // تحميل الـ Navbar
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('navList');
+            navList.classList.toggle('active');
+        }
+    </script>
+
+    <!-- تحميل الـ Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
 </html>

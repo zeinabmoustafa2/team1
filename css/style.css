@@ -1,0 +1,680 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #1a1b20;
+  color: #fff;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+   /* Navbar */
+.nav {
+  background-color: #1a1b20;
+  padding: 20px;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Logo */
+.logo a {
+  color: #ffc107;
+  text-decoration: none;
+
+}
+
+.logo h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* List */
+.list {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.list ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+}
+
+.list ul li a {
+  color: #ccc;
+  font-size: 35px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.list ul li a:hover {
+  color: #ffc107;
+}
+
+/* زر التسجيل */
+.register-btn {
+  background-color: #ffc107;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+
+}
+.register-btn:hover {
+  background-color: #e6b800;
+}
+/* Responsive */
+@media (max-width: 991px) {
+  .container1 {
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 20px;
+    text-align: left; /* توجيه النص لليسار */
+    align-items: flex-start; /* توجيه العناصر لليسار */
+  }
+
+  .list.active {
+    display: flex;
+  }
+
+  .list ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: left; /* توجيه النص لليسار داخل القائمة */
+  }
+
+  .register-btn {
+    width: 100%;
+    justify-content: flex-start; /* محاذاة الزر لليسار */
+  }
+}
+
+/* Start Section */
+.section1 {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #fff;
+  position: relative;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIcons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* الحاوية الرئيسية */
+.container4 {
+  background-image: url("/img/world.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  gap: 50px;
+  padding: 60px 40px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* تنسيق الصورة */
+.image-side {
+  flex: 1 1 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1s ease forwards;
+  position: relative;
+}
+
+.image-side img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  border: 5px solid #e0a800;
+}
+
+.image-side img:hover {
+  transform: scale(1.1);
+}
+
+/* أيقونات حول الصورة */
+.icons-wrapper {
+  position: absolute;
+  width: 500px; /* نفس عرض الصورة */
+  height: 500px; /* نفس ارتفاع الصورة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotateIcons 10s linear infinite;
+}
+
+/* ضبط حجم الأيقونات */
+.icon {
+  position: absolute;
+  font-size: 30px;
+  color: #e0a800;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* وضع الأيقونات بدقة على الحافة الدائرية */
+.icon:nth-child(1) { top: -60px; left: 50%; transform: translateX(-50%); } /* أعلى */
+.icon:nth-child(2) { top: 25%; left: 0; transform: translate(-50%, -50%); } /* أعلى يسار */
+.icon:nth-child(3) { top: 25%; right: 0; transform: translate(50%, -50%); } /* أعلى يمين */
+.icon:nth-child(4) { bottom: 25%; left: 0; transform: translate(-50%, 50%); } /* أسفل يسار */
+.icon:nth-child(5) { bottom: 25%; right: 0; transform: translate(50%, 50%); } /* أسفل يمين */
+.icon:nth-child(6) { bottom: -60px; left: 50%; transform: translateX(-50%); } /* أسفل */
+
+/* تحسين الصورة والأيقونات في الشاشات المتوسطة والصغيرة */
+@media (max-width: 992px) {
+  .image-side img {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+  
+  .icons-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .icon {
+    font-size: 25px;
+    padding: 8px;
+  }
+
+  /* ضبط الأيقونات في الشاشات المتوسطة */
+  .icon:nth-child(1) { top: -45px; } /* أعلى */
+  .icon:nth-child(2), .icon:nth-child(4) { left: -5px; } /* أعلى يسار وأسفل يسار */
+  .icon:nth-child(3), .icon:nth-child(5) { right: -5px; } /* أعلى يمين وأسفل يمين */
+  .icon:nth-child(6) { bottom: -45px; } /* أسفل */
+}
+
+@media (max-width: 768px) {
+  .image-side img {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  .icons-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+
+  .icon {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  /* ضبط الأيقونات في الشاشات الصغيرة */
+  .icon:nth-child(1) { top: -45px; } /* أعلى */
+  .icon:nth-child(2), .icon:nth-child(4) { left: -2px; } /* أعلى يسار وأسفل يسار */
+  .icon:nth-child(3), .icon:nth-child(5) { right: -2px; } /* أعلى يمين وأسفل يمين */
+  .icon:nth-child(6) { bottom: -45px; } /* أسفل */
+}
+
+
+/* نموذج تسجيل الدخول */
+.form-log {
+  background-color: #1e1e1e;
+  padding: 40px 30px;
+  border-radius: 20px;
+  flex: 1 1 40%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.form-log h3 {
+  font-size: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.input-box {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.login-btn {
+  background-color: #e0a800;
+  color: #000;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ffb806;
+}
+@media (max-width: 1142px) {
+  .image-side img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .icons-wrapper {
+    width: 380px;
+    height: 380px;
+  }
+
+  .icon {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  /* تكبير الـ form-log لشاشة 1142px */
+  .form-log {
+    width: 80%; /* جعله يشغل 80% من العرض */
+    width: 550px; /* لا يزيد عن 450px */
+    margin: 50px auto; /* توسيط النموذج */
+  }
+
+  .form-log h3 {
+    font-size: 32px;
+  }
+
+  .input-box {
+    padding: 12px;
+  }
+
+  .input-box input {
+    font-size: 18px;
+  }
+
+  .login-btn {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .options {
+    font-size: 16px;
+  }
+}
+
+
+/* تحسين للشاشات المتوسطة والصغيرة */
+@media (max-width: 992px) {
+  .container4 {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .image-side img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .icons-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+
+  .icon {
+    font-size: 22px;
+    padding: 10px;
+  }
+  .form-log {
+    width: 90%; /* جعله يشغل 90% من العرض */
+    width: 530px; /* لا يزيد عن 400px */
+    padding: 40px 40px; /* زيادة البادينج */
+    margin: 20px auto; /* جعله في المنتصف */
+  }
+
+
+  .form-log h3 {
+    font-size: 30px;
+  }
+
+  .input-box {
+    padding: 12px;
+  }
+
+  .input-box input {
+    font-size: 16px;
+  }
+
+  .login-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-side img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .icons-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  /* تكبير الـ form-log في الشاشات الصغيرة */
+  .form-log {
+    width: 90%; /* جعله يشغل 90% من العرض */
+    width: 500px; /* لا يزيد عن 400px */
+    padding: 40px 40px; /* زيادة البادينج */
+    margin: 20px auto; /* جعله في المنتصف */
+  }
+
+  .form-log h3 {
+    font-size: 28px;
+  }
+
+  .input-box {
+    padding: 18px 30px;
+  }
+
+  .input-box input {
+    font-size: 16px;
+  }
+
+  .login-btn {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .options {
+    font-size: 15px;
+  }
+}
+
+
+/* Start Api */
+.tables {
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #272525;
+  width: 80%;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+.tables h1,
+.tables h2,
+.tables p {
+  color: #ffc107;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1b20;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #ffc107;
+}
+th,
+td {
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #444;
+}
+th {
+  background-color: #ffc107;
+  color: #1a1b20;
+  font-size: 18px;
+}
+td {
+  background-color: #333;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+tr:hover td {
+  background-color: #3a3a3a;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+/* Responsive Table */
+@media (max-width: 991px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 15px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+  td {
+    text-align: left;
+    padding: 15px;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-weight: bold;
+    color: #ffc107;
+  }
+}
+/* End Api */
+/* Start Asked */
+.asked {
+  background-color: #1a1b20;
+  border-radius: 15px;
+  padding: 70px 10px 10px;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color: #292a2f;
+}
+.asked h2  {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+/* End asked */
+/* Start used */
+.used {
+  background-color: #1a1b20;
+  border-radius: 15px;
+  padding: 70px 10px 10px;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End used */
+/* Start Footer */
+footer {
+  padding-top: 50px;
+}
+footer .container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 220px;
+  background-color: #292a2f;
+  border: 1px solid #292a2f;
+  border-radius: 50px 50px 0 0;
+  padding: 50px 50px;
+}
+.logo-footer a {
+  text-decoration: underline;
+  color: #ffc107; 
+  font-size: 30px;
+  font-weight: bold;
+}
+.text-footer p {
+  font-size: 20px;
+  color: #ccc;
+}
+.box2 h2 {
+  font-size: 40px;
+  color: #ffc107;
+  font-weight: bold;
+}
+.list-footer {
+  padding-top: 20px;
+  margin:0 4px;
+}
+.list-footer ul li {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.list-footer li a {
+  color: #ccc;
+}
+.box3 h2 {
+  font-size: 40px;
+  color: #ffc107;
+  font-weight: bold;
+}
+.box3 img {
+  width: 250px;
+  cursor: pointer; 
+}
+@media (max-width: 1142px) {
+  footer .container2 {
+    gap: 20px;
+    border-radius: 0 0;
+  }
+}
+@media (max-width: 991px){
+  footer .container2 {
+    gap: 20px;
+    border-radius: 0 0;
+  }
+}
+.end-footer {
+  background-color: #1a1b20;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 20px;
+}
+/* End Footer */
