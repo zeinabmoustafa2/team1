@@ -3,65 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Log</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>سجل</title>
 </head>
 <body>
-    <div id="navbar"></div>
-    <section>
-        <div class="contanier10">
-            <div class="box10">
-                <img src="img/register-circle.png" alt="photo" >
-            </div>
-            <form action="" method="post">
-                <h3>سجل</h3>
-                <div class="input-container">
-                  <input type="text" name="first-name" required />
-                  <span>الاسم</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="text" name="last-name" required />
-                  <span>الكنية</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="text" name="username" required />
-                  <span>اسم المستخدم</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="email" name="email" required />
-                  <span>البريد الإلكتروني</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="tel" name="phone" required />
-                  <span>رقم الهاتف</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="password" name="password" required />
-                  <span>كلمة المرور</span>
-                </div>
-              
-                <div class="input-container">
-                  <input type="password" name="confirm-password" required />
-                  <span>تأكيد كلمة المرور</span>
-                </div>
-              
-                <label>
-                  <input type="checkbox" name="agree" required>
-                  أوافق على <a href="#" style="color:#4fc3f7; text-decoration:none;">اتفاقية العضوية</a>
-                </label>
-              
-                <button type="submit">سجل</button>
-              </form>
-              
-            
+<div id="navbar"></div>
+<section>
+    <div class="contanier10">
+        <div class="box10">
+            <img src="img/register-circle.png" alt="photo" >
         </div>
-    </section>
+        <form action="" method="post">
+            <h3>سجل</h3>
+            <div class="input-container">
+                <input type="text" name="first-name" required />
+                <span>الاسم</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" name="last-name" required />
+                <span>الكنية</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" name="username" required />
+                <span>اسم المستخدم</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="email" name="email" required />
+                <span>البريد الإلكتروني</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="tel" name="phone" required />
+                <span>رقم الهاتف</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="password" name="password" required />
+                <span>كلمة المرور</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="password" name="confirm-password" required />
+                <span>تأكيد كلمة المرور</span>
+            </div>
+            
+            <label>
+                <input type="checkbox" name="agree" required>
+                أوافق على <a href="#" style="color:#4fc3f7; text-decoration:none;">اتفاقية العضوية</a>
+            </label>
+            
+            <button type="submit">سجل</button>
+            </form>
+            
+        
+    </div>
+</section>
     <script>
         // تحميل الـ Navbar
         fetch('nav.html')
