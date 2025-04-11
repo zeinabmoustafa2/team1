@@ -22,202 +22,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-/* Navbar */
-.nav {
-  background-color: #1a1b20;
-  padding: 20px;
-}
-.container1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-/* Logo */
-.logo a {
-  color: #ffc107;
-  text-decoration: none;
-}
-.logo h2 {
-  font-size: 40px;
-  font-weight: bold;
-}
-/* Menu Icon */
-.menu-icon {
-  display: none;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-}
-/* List */
-.list {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  flex-grow: 1;
-  justify-content: center;
-}
-.list ul {
-  display: flex;
-  gap: 70px;
-  list-style: none;
-}
-.list ul li a {
-  color: #ccc;
-  font-size: 35px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.list ul li a:hover {
-  color: #ffc107;
-}
-.register-btn {
-  background-color: #ff9800;
-  color: white;
-  border: none;
-  padding: 10px 40px;
-  font-size: 24px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  justify-content: center;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.register-btn:hover {
-  background-color: #e68900;
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(255, 152, 0, 0.5);
-}
-.register-btn i {
-  font-size: 24px; 
-  color: white;
-}
-.btn-nav .register-text {
-  color: white;
-}
-
-/* Responsive */
-@media (min-width: 1050px) {
-  .register-btn {
-    font-size: 20px;
-    padding: 15px 20px;
-  }
-  .register-btn i {
-    font-size: 20px;
-  }
-  .menu-icon {
-    font-size: 40px;
-  }
-  .list ul li a {
-    font-size: 22px;
-  }
-  .logo h2 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .logo h2 {
-    font-size: 30px;
-  }
-  .list ul li a {
-    font-size: 22px;
-    gap: 30px;
-  }
-  .register-btn {
-    font-size: 18px;
-    padding: 12px 17px;
-    margin-top: 15px;
-  }
-  .register-btn i {
-    font-size: 18px;
-  }
-  .menu-icon {
-    font-size: 40px;
-  }
-  .list, .list ul {
-    gap: 20px;
-  }
-}
-@media (max-width: 1024px) {
-  .container1 {
-    gap: 25px;
-  }
-  .logo h2 {
-    font-size: 30px;
-  }
-  .list, .list ul {
-    gap: 20px;
-  }
-  .list ul li a {
-    font-size: 20px;
-    gap: 10px;
-  }
-  .register-btn {
-    font-size: 17px;
-    padding: 11px 16px;
-    margin-top: 15px;
-  }
-  .register-btn i {
-    font-size: 17px; 
-  }
-  .menu-icon {
-    font-size: 40px;
-  }
-}
-@media (max-width: 991px) {
-  .container1 {
-    flex-wrap: wrap;
-  }
-  .menu-icon {
-    display: block;
-    font-size: 40px;
-  }
-  .list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    gap: 15px;
-    text-align: left;
-    align-items: flex-start;
-    align-items: stretch;
-  }
-  .list.active {
-    display: flex;
-  }
-  .list ul {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%; 
-  }
-  .list ul li a {
-    font-size: 24px;
-  }
-  .logo h2 {
-    font-size: 28px;
-  }
-  .register-btn {
-    width: 100% !important;   
-    font-size: 20px;
-    padding: 12px 20px;
-    display: flex;
-    text-align: left;
-    direction: ltr;
-    justify-content: flex-start;
-    margin: 0;          
-    box-sizing: border-box;
-  }
-  .register-btn i {
-    font-size: 20px;
-  }
-}
-
 /* Start Section */
 .section1 {
   padding: 50px 20px;
@@ -229,7 +33,6 @@ ul {
 .section1 p {
   animation: fadeInUp 1s ease forwards, pulseZoom 2s ease-in-out 1.2s;
 }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -247,7 +50,6 @@ ul {
     transform: scale(1);
   }
 }
-
 .section1 h1 {
   font-size: 50px;
   text-align: center;
@@ -279,7 +81,6 @@ ul {
     transform: rotate(360deg);
   }
 }
-
 /* section1*/
 .container4 {
   background-image: url("/img/world.svg");
@@ -414,7 +215,6 @@ ul {
     width: 500px;
   }
 }
-
 @media (max-width: 992px) {
   .image-side img {
     width: 350px;
@@ -442,7 +242,6 @@ ul {
     padding-top: 10px;
   }
 }
-
 @media (max-width: 768px) {
   .image-side img {
     width: 300px;
@@ -564,7 +363,6 @@ ul {
   .input-box {
     padding: 10x 15px;
     border-radius: 10px;
-    /* margin: 20px 10px; */
   }
   .input-box input {
     font-size: 18px;
@@ -614,7 +412,6 @@ ul {
   .input-box {
     padding: 5px 10px;
     border-radius: 7px;
-    /* margin: 20px 10px; */
   }
   .input-box input {
     font-size: 15px;
@@ -636,7 +433,6 @@ ul {
     padding: 5px;
   }
 }
-
 /*  Start Section2 */
 .section2 {
   background-image: url("/img/x8e2teldxfwxfuof_kzhick_gmmefm.png");
@@ -735,7 +531,6 @@ ul {
 .box2-section2 {
   gap: 55px;
 }
-
 }
 @media (max-width: 1024px) {
   .container5 {
@@ -848,7 +643,6 @@ ul {
     padding: 6px;
   }
 }
-
 /* End Section2 */
 /* Start Section3 */
 .container6 {
@@ -1095,7 +889,6 @@ ul {
   width: 200px; 
   justify-content: center; 
 }
-
 .register-btn2:hover {
   background-color: #e68900;
   transform: scale(1.03);
@@ -1109,22 +902,18 @@ ul {
   .container7 {
     padding: 20px;
   }
-
   .container7 h3 {
     font-size: 30px; 
     line-height: 1.4;
   }
-
   .container7 h2 {
     font-size: 35px; 
   }
-
   .register-btn2 {
     font-size: 25px;
     padding: 15px 30px; 
     max-width: 250px; 
   }
-
   .register-btn2 i {
     font-size: 30px;
   }
@@ -1133,11 +922,9 @@ ul {
   .container7 {
     padding: 15px;
   }
-
   .container7 h3 {
     font-size: 25px; 
   }
-
   .container7 h2 {
     font-size: 30px;
   }
@@ -1151,7 +938,6 @@ ul {
     font-size: 25px;
   }
 }
-
 /* end section4 */
 /* Start Api */
 .tables {
@@ -1281,7 +1067,6 @@ a {
   font-size: 28px;
   text-align: center;
 }
-
 /* End asked */
 /* Start used */
 .used {
@@ -1295,160 +1080,3 @@ a {
   align-items: center;
 }
 /* End used */
-/* Start Footer */
-footer {
-  padding-top: 50px;
-}
-footer .container2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  background-color: #292a2f;
-  border: 1px solid #292a2f;
-  border-radius: 50px 50px 0 0;
-  padding: 30px 30px;
-  overflow: hidden;
-}
-.logo-footer a {
-  /* text-decoration: underline; */
-  color: #ffc107; 
-  font-size: 24px;
-  font-weight: bold;
-}
-.logo-footer a:hover {
-  text-decoration: underline;
-}
-.text-footer p {
-  font-size: 18px;
-  color: #ccc;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-.box2 h2 {
-  font-size: 30px;
-  color: #ffc107;
-  font-weight: bold;
-  padding-top: 8px;
-}
-.list-footer {
-  padding-top: 20px;
-  margin:0 4px;
-}
-.list-footer ul li {
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-.list-footer li a {
-  color: #ccc;
-}
-.box3 h2 {
-  font-size: 30px;
-  color: #ffc107;
-  font-weight: bold;
-  padding-top: 8px;
-}
-.box3 img {
-  width: 250px;
-  cursor: pointer; 
-}
-@media (min-width: 1400px) {
-  footer .container2 {
-    gap: 20px;
-    border-radius: 0 0;
-  }
-}
-@media (max-width: 1142px) {
-  footer .container2 {
-    gap: 20px;
-    border-radius: 0 0;
-  }
-}
-@media (max-width: 991px) {
-  footer .container2 {
-    gap: 20px;
-    border-radius: 0;
-    padding: 40px 10px; 
-  }
-  
-  .logo-footer a {
-    font-size: 24px; 
-  }
-
-  .text-footer p {
-    font-size: 15px; 
-  }
-
-  .box2 h2,
-  .box3 h2 {
-    font-size: 27px; 
-  }
-
-  .list-footer ul li {
-    font-size: 18px; 
-    padding-bottom: 12px;
-  }
-
-  .box3 img {
-    width: 200px; 
-  }
-
-  .end-footer {
-    font-size: 18px; 
-    padding: 15px;
-  }
-}
-
-.end-footer {
-  background-color: #1a1b20;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 16px;
-  color: rgb(225, 221, 221);
-}
-@media (max-width: 320px) {
-  .end-footer {
-    font-size: 14px; 
-    padding: 10px; 
-  }
-}
-
-@media (max-width: 320px) {
-  footer {
-    padding-top: 30px;
-  }
-  footer .container2 {
-    grid-template-columns: 1fr; 
-    gap: 10px;
-    padding: 30px 20px;
-    border-radius: 0;
-  }
-  .logo-footer a {
-    font-size: 20px; 
-    text-align: center;
-  }
-  .text-footer p {
-    font-size: 14px;
-    text-align: center; 
-  }
-  .box2 h2,
-  .box3 h2 {
-    font-size: 25px; 
-    text-align: center;
-  }
-  .list-footer ul li {
-    font-size: 16px;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  .box3 img {
-    width: 180px; 
-    display: block;
-    margin: 0 auto; 
-  }
-  .end-footer {
-    font-size: 15px;
-    padding: 10px;
-  }
-}
-/* End Footer */
