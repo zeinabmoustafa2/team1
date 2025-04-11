@@ -224,7 +224,13 @@ ul {
     flex-wrap: wrap;
     gap: 70px;
     padding: 100px;
-    background-color: #121212;
+    /* background-color: #121212; */
+    background-image: url("../img/world.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.92);
+    background-blend-mode: overlay;
 }
 form h3 {
     text-align: center;
@@ -380,7 +386,7 @@ form label {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    background-image: url("/img/pattern.svg");
+    background-image: url("../img/pattern.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
