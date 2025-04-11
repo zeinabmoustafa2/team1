@@ -68,6 +68,12 @@
             .then(response => response.text())
             .then(data => document.getElementById('navbar').innerHTML = data);
     </script>
+        <script>
+            function toggleMenu() {
+                const navList = document.getElementById('navList');
+                navList.classList.toggle('active');
+            }
+        </script>
     <!-- تحميل الـ Footer -->
     <div id="footer"></div>
     <script>
