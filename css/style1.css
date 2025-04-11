@@ -380,7 +380,7 @@ form label {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    background-image: url("img/pattern.svg");
+    background-image: url("/img/pattern.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

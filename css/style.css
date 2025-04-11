@@ -83,7 +83,7 @@ ul {
 }
 /* section1*/
 .container4 {
-  background-image: url("img/world.svg");
+  background-image: url("/img/world.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,7 +435,7 @@ ul {
 }
 /*  Start Section2 */
 .section2 {
-  background-image: url("img/x8e2teldxfwxfuof_kzhick_gmmefm.png");
+  background-image: url("/img/x8e2teldxfwxfuof_kzhick_gmmefm.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -855,7 +855,7 @@ ul {
   align-items: center;
   justify-content: center; 
   text-align: center;
-  background-image: url("img/pattern.svg");
+  background-image: url("/img/pattern.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
